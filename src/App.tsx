@@ -439,7 +439,6 @@ function App() {
                 </p>
                 <div className="flex items-center justify-center space-x-2 text-fuchsia-600">
                   <Heart className="w-5 h-5" />
-                  <span className="text-sm font-medium">{siteContent.contact.encouragement.freeConsultation}</span>
                 </div>
               </div>
             </div>

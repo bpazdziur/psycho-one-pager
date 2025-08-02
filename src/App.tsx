@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Phone, Mail, Monitor, Heart, Brain, Users, MessageCircle, Calendar, CheckCircle, Instagram, Facebook } from 'lucide-react';
+import { Menu, X, Mail, Monitor, Heart, Brain, Users, MessageCircle, Calendar, CheckCircle, Instagram, Facebook } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -404,63 +404,76 @@ function App() {
       </section>
 
       {/* KONTAKT Section */}
-      <section id="contact" className="py-16 bg-white">
+      <section id="contact" className="py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">KONTAKT</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-fuchsia-600 to-teal-600 mx-auto"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-fuchsia-600 to-teal-600 mx-auto mb-4"></div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Gotowa jestem pomóc Ci w drodze do lepszego samopoczucia. Skontaktuj się ze mną, aby umówić się na konsultację.
+            </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
-            {/* Dane kontaktowe */}
-            <div className="bg-gradient-to-br from-fuchsia-50 to-teal-50 rounded-lg p-8 mb-8">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Dane kontaktowe</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-fuchsia-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Mail className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="font-semibold text-gray-800 mb-2">Email</h4>
-                  <p className="text-gray-600">anna.kowalska@example.com</p>
+            {/* Główny kontakt - Email */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-100">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-fuchsia-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Mail className="w-10 h-10 text-white" />
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-fuchsia-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Monitor className="w-8 h-8 text-white" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Napisz do mnie</h3>
+                <p className="text-gray-600 mb-6">
+                  Najszybszy sposób na kontakt to bezpośredni email. Odpowiem w ciągu 24 godzin.
+                </p>
+                <a 
+                  href="mailto:anna.kowalska@example.com?subject=Konsultacja psychoterapeutyczna&body=Cześć!%0A%0AZainteresowana jestem konsultacją psychoterapeutyczną.%0A%0APozdrawiam"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-fuchsia-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-fuchsia-700 hover:to-teal-700"
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>anna.kowalska@example.com</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Dodatkowe informacje */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-fuchsia-50 to-teal-50 rounded-xl p-6 border border-fuchsia-100">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-fuchsia-600 to-teal-600 rounded-lg flex items-center justify-center">
+                    <Calendar className="w-6 h-6 text-white" />
                   </div>
-                  <h4 className="font-semibold text-gray-800 mb-2">Forma spotkań</h4>
-                  <p className="text-gray-600">Tylko online</p>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-1">Dostępność</h4>
+                    <p className="text-gray-600 text-sm">Pon-Pt: 9:00-18:00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-teal-50 to-fuchsia-50 rounded-xl p-6 border border-teal-100">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-fuchsia-600 rounded-lg flex items-center justify-center">
+                    <Monitor className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-1">Forma spotkań</h4>
+                    <p className="text-gray-600 text-sm">Tylko online</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Formularz kontaktowy */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Zdanie zachęcające do kontaktu</h3>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Imię</label>
-                    <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fuchsia-500 focus:border-transparent" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input type="email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fuchsia-500 focus:border-transparent" />
-                  </div>
+            {/* Zachęcający tekst */}
+            <div className="mt-8 text-center">
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">Pierwszy krok do zmiany</h4>
+                <p className="text-gray-600 mb-4">
+                  Nie musisz przechodzić przez to samotnie. Każda wiadomość to pierwszy krok w kierunku lepszego samopoczucia.
+                </p>
+                <div className="flex items-center justify-center space-x-2 text-fuchsia-600">
+                  <Heart className="w-5 h-5" />
+                  <span className="text-sm font-medium">Bezpłatna konsultacja wstępna</span>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Temat</label>
-                  <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fuchsia-500 focus:border-transparent" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Wiadomość</label>
-                  <textarea rows={5} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fuchsia-500 focus:border-transparent"></textarea>
-                </div>
-                <div className="text-center">
-                  <button type="submit" className="bg-gradient-to-r from-fuchsia-600 to-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                    Wyślij wiadomość
-                  </button>
-                </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>

@@ -150,8 +150,7 @@ export const siteContent = {
     },
     encouragement: {
       title: "Pierwszy krok do zmiany",
-      description: "Nie musisz przechodzić przez to samotnie. Każda wiadomość to pierwszy krok w kierunku lepszego samopoczucia.",
-      freeConsultation: "Bezpłatna konsultacja wstępna"
+      description: "Nie musisz przechodzić przez to samotnie. Każda wiadomość to pierwszy krok w kierunku lepszego samopoczucia."
     }
   },
 

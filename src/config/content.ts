@@ -13,7 +13,7 @@
 export const siteContent = {
   // Header & Navigation
   header: {
-    email: "kontakt@example.com",
+    email: "kontakt@example.pl",
     social: {
       instagram: "https://instagram.com",
       facebook: "https://facebook.com"

@@ -403,33 +403,6 @@ function App() {
               </div>
             </div>
 
-            {/* Dodatkowe informacje */}
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-fuchsia-50 to-teal-50 rounded-xl p-6 border border-fuchsia-100">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-fuchsia-600 to-teal-600 rounded-lg flex items-center justify-center">
-                    <Calendar className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">{siteContent.contact.availability.title}</h4>
-                    <p className="text-gray-600 text-sm">{siteContent.contact.availability.hours}</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-teal-50 to-fuchsia-50 rounded-xl p-6 border border-teal-100">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-fuchsia-600 rounded-lg flex items-center justify-center">
-                    <Monitor className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1">{siteContent.contact.meetingType.title}</h4>
-                    <p className="text-gray-600 text-sm">{siteContent.contact.meetingType.type}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Zachęcający tekst */}
             <div className="mt-8 text-center">
               <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">

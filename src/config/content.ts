@@ -16,13 +16,13 @@ export const siteContent = {
   header: {
     email: "marta.pazdziur@gmail.com",
     social: {
-      instagram: "https://instagram.com",
+      instagram: "https://www.instagram.com/pokoj_z_jedzeniem",
       facebook: "https://facebook.com"
     },
     navigation: {
       about: "O MNIE",
       whatIs: "CZYM JEST Psychoterapia/Psychodietetyka",
-      areas: "OBSZARY I PROBLEMY Z KTÓRYMI PRACUJĘ",
+      areas: "OBSZARY I PROBLEMY, Z KTÓRYMI PRACUJĘ",
       services: "RODZAJE USŁUG",
       contact: "KONTAKT"
     }
@@ -41,7 +41,7 @@ export const siteContent = {
     title: "O MNIE",
     name: "Marta Paździur",
     description: [
-      "Jestem magistrem psychologii, psychodietetykiem oraz psychoterapeutą poznawczo-behawioralnym w trakcie certyfikacji. Dodatkowe kursy i szkolenia pozwalają mi wzbogacać mój warsztat pracy o narzędzia i techniki zaczerpnięte z Terapii Schematów, DBT, oraz Mindfulness. Doświadczenie zawodowe zdobywam w takich placówkach jak: Dolnośląskie Centrum Zdrowia Psychicznego, Centrum Profilaktyki i Terapii SALUS w Dlugolece Fundacja Opieka i Troska, Centrum Zdrowia Psychicznego i Psychoterapii Reatrybucja, Centrum Pomocy Psychologicznej we Wroclawiu, Ogólnopolskie Centrum Zaburzeń Odzywiania.\n W swojej pracy kieruję się wytycznymi Kodeksu Etycznego. Pracuję pod stalą superwizją. Wciąz podnoszę swoje kwalifikacje, uczestnicząc w licznych szkoleniach."
+      "Jestem magistrem psychologii, psychodietetykiem oraz psychoterapeutą poznawczo-behawioralnym w trakcie certyfikacji. Dodatkowe kursy i szkolenia pozwalają mi wzbogacać mój warsztat pracy o narzędzia i techniki zaczerpnięte z Terapii Schematów, DBT, oraz Mindfulness. Doświadczenie zawodowe zdobywam w takich placówkach jak: Dolnośląskie Centrum Zdrowia Psychicznego, Centrum Profilaktyki i Terapii SALUS w Długołęce, Fundacja Opieka i Troska, Centrum Zdrowia Psychicznego i Psychoterapii Reatrybucja, Centrum Pomocy Psychologicznej we Wrocławiu, Ogólnopolskie Centrum Zaburzeń Odżywiania.\n W swojej pracy kieruję się wytycznymi Kodeksu Etycznego. Pracuję pod stałą superwizją. Wciąż podnoszę swoje kwalifikacje, uczestnicząc w licznych szkoleniach."
     ],
     email: "marta.pazdziur@gmail.com",
   
@@ -53,13 +53,13 @@ export const siteContent = {
     title: "CZYM JEST",
     psychotherapy: {
       title: "Psychoterapia poznawczo-behawioralna",
-      description: "Terapia CBT (poznawczo - behawioralna), to metoda terapeutyczna, której skuteczność jest poparta licznymi badaniami naukowymi. koncentruje się na zmianie negatywnych wzorców myślenia i zachowania. Pracujemy nad identyfikacją destrukcyjnych myśli i schematów i zastępowaniem ich zdrowymi przekonaniami, co przekłada się na zmianę samopoczucia.",
-      hoverText: "CBT to sprawdzona metoda leczenia zaburzeń nastroju, lękowych, zaburzeń odzywiania, osobowości, i wielu innych problemów",
+      description: "Terapia CBT (poznawczo-behawioralna), to metoda terapeutyczna, której skuteczność jest poparta licznymi badaniami naukowymi. Koncentruje się na zmianie negatywnych wzorców myślenia i zachowania. Pracujemy nad identyfikacją destrukcyjnych myśli i schematów i zastępowaniem ich zdrowymi przekonaniami, co przekłada się na zmianę samopoczucia.",
+      hoverText: "CBT to sprawdzona metoda leczenia zaburzeń nastroju, lękowych, zaburzeń odżywiania, osobowości, i wielu innych problemów",
       iconLabel: "Psychoterapia"
     },
     psychodietetics: {
       title: "Psychodietetyka",
-      description: "Psychodietetyka łączy wiedzę z zakresu psychologii i dietetyki, pomagając w rozwiązywaniu problemów związanych z jedzeniem, wagą i obrazem własnego ciała. Pracujemy nad budowaniem zdrowej relacji z jedzeniem. Wykorzystanie narzędzi psychodietetycznych pomaga poradzić sobie m.in. z kompulsywnym objadaniem się, lękiem przed przybraniem na wadze, czy zaburzonym obrazem własnego ciała. Pomagają równiez przeprowadzić skuteczną redukcję masy ciała bez diet, w oparciu o narzędzia psychologiczne. ",
+      description: "Psychodietetyka łączy wiedzę z zakresu psychologii i dietetyki, pomagając w rozwiązywaniu problemów związanych z jedzeniem, wagą i obrazem własnego ciała. Pracujemy nad budowaniem zdrowej relacji z jedzeniem. Wykorzystanie narzędzi psychodietetycznych pomaga poradzić sobie m.in. z kompulsywnym objadaniem się, lękiem przed przybraniem na wadze, czy zaburzonym obrazem własnego ciała. Pomagają również przeprowadzić skuteczną redukcję masy ciała bez diet, w oparciu o narzędzia psychologiczne. ",
       hoverText: "Psychodietetyka to holistyczne podejście łączące psychologię z dietetyką, pomagające w budowaniu zdrowej relacji z jedzeniem i własnym ciałem.",
       iconLabel: "Psychodietetyka"
     }
@@ -67,7 +67,7 @@ export const siteContent = {
 
   // Areas Section
   areas: {
-    title: "OBSZARY I PROBLEMY Z KTÓRYMI PRACUJĘ",
+    title: "OBSZARY I PROBLEMY, Z KTÓRYMI PRACUJĘ",
     psychotherapy: {
       title: "Psychoterapia",
       hoverTitle: "Psychoterapia poznawczo-behawioralna",
@@ -77,7 +77,7 @@ export const siteContent = {
         "Zaburzenia lękowe i napady paniki",
         "Depresja i zaburzenia nastroju",
         "Problemy w relacjach interpersonalnych",
-        "Zaburzenia odzywiania",
+        "Zaburzenia odżywiania",
         "Zaburzenia osobowości",
         "Przewlekły stres",
         "Niska samoocena i brak pewności siebie",
@@ -115,7 +115,7 @@ export const siteContent = {
         "Sesja trwa 50 - 60 minut",
         "Pozwala zapoznać się z problemem i indywidualnie dopasować plan dalszej pracy",
         "Prowadzona online",
-        "Moze stanowić niezalezną formę wsparcia (bez podejmowania długoterminowej psychoterapii)",
+        "Może stanowić niezależną formę wsparcia (bez podejmowania długoterminowej psychoterapii)",
         "Koszt sesji - 220 zł"
       
       ]
@@ -126,7 +126,7 @@ export const siteContent = {
         "Regularne spotkania",
         "Sesja trwa 50 minut",
         "Koszt sesji - 220 zł",
-        "Prowadzona w nurcie poznawczo - behawioralnym"
+        "Prowadzona w nurcie poznawczo-behawioralnym"
         
       ]
     },
@@ -134,12 +134,12 @@ export const siteContent = {
       title: "Konsultacja psychodietetyczna",
       features: [
         "Analiza nawyków żywieniowych",
-        "Praca nad psychologicznymi aspektami odzywiania",
+        "Praca nad psychologicznymi aspektami odżywiania",
         "Wykorzystanie narzędzi CBT",
         "praca oparta o indywidualne cele, warunki oraz zasoby klienta",
         "Edukacja żywieniowa",
         "Sesja trwa 50 minut",
-        "Koszt spotkania - 220zł"
+        "Koszt spotkania - 220 zł"
       ]
     }
   },
@@ -150,14 +150,14 @@ export const siteContent = {
     subtitle: "W celu umówienia konsultacji zapraszam do kontaktu emailowego",
     email: {
       title: "Napisz do mnie",
-      description: "Najszybszy sposób na kontakt to bezpośredni email. Odpowiem tak szybko, jak to mozliwe.",
+      description: "Najszybszy sposób na kontakt to bezpośredni email. Odpowiem tak szybko, jak to możliwe.",
       address: "marta.pazdziur@gmail.com",
       subject: "Konsultacja psychoterapeutyczna",
       body: "Cześć!\n\nZainteresowana jestem konsultacją psychoterapeutyczną.\n\nPozdrawiam"
     },
     encouragement: {
       title: "Pierwszy krok do zmiany",
-      description: "Moim celem jako terapeuty, jest sprawić by pacjent przestał mnie potrzebować.  Chcę wyposażyć Cię w narzędzia, ktore pozwolą Ci samodzielnie radzić sobie z trudnościami nawet po zakończeniu terapii."
+      description: "Moim celem jako terapeuty jest sprawić, by pacjent przestał mnie potrzebować. Chcę wyposażyć Cię w narzędzia, które pozwolą Ci samodzielnie radzić sobie z trudnościami nawet po zakończeniu terapii."
     }
   },
 

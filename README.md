@@ -1,7 +1,5 @@
 # Psycho One Pager
 
-Personal website for Anna Kowalska - Psychotherapy and Psychodietetics services.
-
 ## About
 
 This is a modern, responsive website built with React, TypeScript, and Tailwind CSS. The site showcases professional psychotherapy and psychodietetics services with a clean, accessible design.

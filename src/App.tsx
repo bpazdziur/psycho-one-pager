@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Mail, Monitor, Heart, Brain, Users, MessageCircle, Calendar, CheckCircle, Instagram, Facebook } from 'lucide-react';
+import { Menu, X, Mail, Monitor, Heart, Brain, Users, MessageCircle, Calendar, CheckCircle, Instagram, /* Facebook */ } from 'lucide-react';
 import { siteContent } from './config/content';
+// Import images
+import logoImage from './assets/images/logo.jpg';
+// Use a relative path for the profile picture to avoid JPEG extension issues
+const profilePictureImage = new URL('./assets/images/profile_picture.JPEG', import.meta.url).href;
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,6 +58,7 @@ function App() {
                 >
                   <Instagram className="w-4 h-4" />
                 </a>
+                {/* Facebook icon temporarily hidden until the profile is ready 
                 <a 
                   href={siteContent.header.social.facebook}
                   target="_blank" 
@@ -63,17 +68,19 @@ function App() {
                 >
                   <Facebook className="w-4 h-4" />
                 </a>
+                */}
               </div>
             </div>
 
             {/* Logo */}
-            {showSmallLogo && (
-              <div className="absolute left-1/2 transform -translate-x-1/2">
-                <div className="w-20 h-20 bg-gray-200 rounded-lg flex items-center justify-center text-sm font-semibold text-gray-600 shadow-md">
-                  {siteContent.hero.logo}
-                </div>
+            <div className={`absolute left-1/2 transform -translate-x-1/2 -translate-y-1 hidden md:block transition-all duration-500 ${showSmallLogo ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+              <div 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="w-16 h-16 rounded-lg flex items-center justify-center text-sm font-semibold shadow-md overflow-hidden border-2 border-white cursor-pointer hover:shadow-lg transition-all duration-300"
+              >
+                <img src={logoImage} alt="Logo" className="w-full h-full object-cover" />
               </div>
-            )}
+            </div>
 
             {/* Menu hamburger */}
             <div className="ml-auto">
@@ -108,8 +115,8 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Duże logo */}
           <div className="mb-8">
-            <div className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-xl flex items-center justify-center text-xl md:text-2xl font-bold text-gray-700 shadow-lg mx-auto border-2 border-gray-100">
-              {siteContent.hero.logo}
+            <div className="w-32 h-32 md:w-60 md:h-60 rounded-xl flex items-center justify-center shadow-lg mx-auto border-2 border-gray-100 overflow-hidden">
+              <img src={logoImage} alt="Logo" className="w-full h-full object-cover" />
             </div>
           </div>
           
@@ -156,13 +163,12 @@ function App() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Monitor className="w-4 h-4 text-teal-600" />
-                  <span>{siteContent.about.meetingType}</span>
                 </div>
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="w-80 h-96 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
-                {siteContent.about.photoPlaceholder}
+              <div className="w-80 h-96 rounded-lg flex items-center justify-center overflow-hidden">
+                <img src={profilePictureImage} alt="Marta Paździur" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

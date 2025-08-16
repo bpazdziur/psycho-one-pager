@@ -10,10 +10,11 @@
 //
 // ========================================
 
+
 export const siteContent = {
   // Header & Navigation
   header: {
-    email: "kontakt@example.com",
+    email: "marta.pazdziur@gmail.com",
     social: {
       instagram: "https://instagram.com",
       facebook: "https://facebook.com"
@@ -31,20 +32,19 @@ export const siteContent = {
   hero: {
     logo: "LOGO",
     title: "PSYCHOTERAPIA POZNAWCZO-BEHAWIORALNA\nPSYCHODIETETYKA",
-    subtitle: "Profesjonalne wsparcie psychologiczne i dietetyczne w formie online. Pomogę Ci odnaleźć równowagę i zdrowe nawyki.",
+    subtitle: "Profesjonalne wsparcie psychologiczne i psychodietetyczne. Pomogę Ci odzyskać równowagę.",
     ctaButton: "Umów konsultację"
   },
 
   // About Section
   about: {
     title: "O MNIE",
-    name: "Anna Kowalska",
+    name: "Marta Paździur",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "Jestem magistrem psychologii, psychodietetykiem oraz psychoterapeutą poznawczo-behawioralnym w trakcie certyfikacji. Dodatkowe kursy i szkolenia pozwalają mi wzbogacać mój warsztat pracy o narzędzia i techniki zaczerpnięte z Terapii Schematów, DBT, oraz Mindfulness. Doświadczenie zawodowe zdobywam w takich placówkach jak: Dolnośląskie Centrum Zdrowia Psychicznego, Centrum Profilaktyki i Terapii SALUS w Dlugolece Fundacja Opieka i Troska, Centrum Zdrowia Psychicznego i Psychoterapii Reatrybucja, Centrum Pomocy Psychologicznej we Wroclawiu, Ogólnopolskie Centrum Zaburzeń Odzywiania.\n W swojej pracy kieruję się wytycznymi Kodeksu Etycznego. Pracuję pod stalą superwizją. Wciąz podnoszę swoje kwalifikacje, uczestnicząc w licznych szkoleniach."
     ],
-    email: "anna.kowalska@example.com",
-    meetingType: "Przyjmuję tylko online",
+    email: "marta.pazdziur@gmail.com",
+  
     photoPlaceholder: "Zdjęcie"
   },
 
@@ -53,14 +53,14 @@ export const siteContent = {
     title: "CZYM JEST",
     psychotherapy: {
       title: "Psychoterapia poznawczo-behawioralna",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      hoverText: "Psychoterapia poznawczo-behawioralna to skuteczna metoda leczenia zaburzeń psychicznych, która koncentruje się na zmianie negatywnych wzorców myślenia i zachowania.",
+      description: "Terapia CBT (poznawczo - behawioralna), to metoda terapeutyczna, której skuteczność jest poparta licznymi badaniami naukowymi. koncentruje się na zmianie negatywnych wzorców myślenia i zachowania. Pracujemy nad identyfikacją destrukcyjnych myśli i schematów i zastępowaniem ich zdrowymi przekonaniami, co przekłada się na zmianę samopoczucia.",
+      hoverText: "CBT to sprawdzona metoda leczenia zaburzeń nastroju, lękowych, zaburzeń odzywiania, osobowości, i wielu innych problemów",
       iconLabel: "Psychoterapia"
     },
     psychodietetics: {
       title: "Psychodietetyka",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      hoverText: "Psychodietetyka łączy wiedzę z zakresu psychologii i dietetyki, pomagając w rozwiązywaniu problemów związanych z jedzeniem i wagą.",
+      description: "Psychodietetyka łączy wiedzę z zakresu psychologii i dietetyki, pomagając w rozwiązywaniu problemów związanych z jedzeniem, wagą i obrazem własnego ciała. Pracujemy nad budowaniem zdrowej relacji z jedzeniem. Wykorzystanie narzędzi psychodietetycznych pomaga poradzić sobie m.in. z kompulsywnym objadaniem się, lękiem przed przybraniem na wadze, czy zaburzonym obrazem własnego ciała. Pomagają równiez przeprowadzić skuteczną redukcję masy ciała bez diet, w oparciu o narzędzia psychologiczne. ",
+      hoverText: "Psychodietetyka to holistyczne podejście łączące psychologię z dietetyką, pomagające w budowaniu zdrowej relacji z jedzeniem i własnym ciałem.",
       iconLabel: "Psychodietetyka"
     }
   },
@@ -77,8 +77,11 @@ export const siteContent = {
         "Zaburzenia lękowe i napady paniki",
         "Depresja i zaburzenia nastroju",
         "Problemy w relacjach interpersonalnych",
+        "Zaburzenia odzywiania",
+        "Zaburzenia osobowości",
+        "Przewlekły stres",
         "Niska samoocena i brak pewności siebie",
-        "Stres i wypalenie zawodowe"
+        
       ]
     },
     psychodietetics: {
@@ -99,32 +102,44 @@ export const siteContent = {
   // Services Section
   services: {
     title: "RODZAJE USŁUG",
-    subtitle: "Szczegóły rodzaju usług bez ceny",
+    subtitle: "Konsultacja psychologiczna",
+    categories: [
+      "Psychoterapia indywidualna",
+      "Konsultacja psychodietetyczna",
+      "Szkolenia"
+    ],
     individual: {
-      title: "Konsultacja indywidualna",
+      title: "Konsultacja psychologiczna",
       features: [
-        "Sesja trwa 50 minut",
+        "Poprzedza rozpoczęcie pracy terapeutycznej",
+        "Sesja trwa 50 - 60 minut",
+        "Pozwala zapoznać się z problemem i indywidualnie dopasować plan dalszej pracy",
         "Prowadzona online",
-        "Indywidualne podejście",
-        "Elastyczne terminy"
+        "Moze stanowić niezalezną formę wsparcia (bez podejmowania długoterminowej psychoterapii)",
+        "Koszt sesji - 220 zł"
+      
       ]
     },
     longTerm: {
-      title: "Terapia długoterminowa",
+      title: "Psychoterapia indywidualna",
       features: [
         "Regularne spotkania",
-        "Kompleksowe wsparcie",
-        "Monitorowanie postępów",
-        "Długofalowe efekty"
+        "Sesja trwa 50 minut",
+        "Koszt sesji - 220 zł",
+        "Prowadzona w nurcie poznawczo - behawioralnym"
+        
       ]
     },
     dietetic: {
       title: "Konsultacja psychodietetyczna",
       features: [
         "Analiza nawyków żywieniowych",
-        "Plan zmiany zachowań",
-        "Wsparcie psychologiczne",
-        "Edukacja żywieniowa"
+        "Praca nad psychologicznymi aspektami odzywiania",
+        "Wykorzystanie narzędzi CBT",
+        "praca oparta o indywidualne cele, warunki oraz zasoby klienta",
+        "Edukacja żywieniowa",
+        "Sesja trwa 50 minut",
+        "Koszt spotkania - 220zł"
       ]
     }
   },
@@ -132,30 +147,22 @@ export const siteContent = {
   // Contact Section
   contact: {
     title: "KONTAKT",
-    subtitle: "Gotowa jestem pomóc Ci w drodze do lepszego samopoczucia. Skontaktuj się ze mną, aby umówić się na konsultację.",
+    subtitle: "W celu umówienia konsultacji zapraszam do kontaktu emailowego",
     email: {
       title: "Napisz do mnie",
-      description: "Najszybszy sposób na kontakt to bezpośredni email. Odpowiem w ciągu 24 godzin.",
-      address: "anna.kowalska@example.com",
+      description: "Najszybszy sposób na kontakt to bezpośredni email. Odpowiem tak szybko, jak to mozliwe.",
+      address: "marta.pazdziur@gmail.com",
       subject: "Konsultacja psychoterapeutyczna",
       body: "Cześć!\n\nZainteresowana jestem konsultacją psychoterapeutyczną.\n\nPozdrawiam"
     },
-    availability: {
-      title: "Dostępność",
-      hours: "Pon-Pt: 9:00-18:00"
-    },
-    meetingType: {
-      title: "Forma spotkań",
-      type: "Tylko online"
-    },
     encouragement: {
       title: "Pierwszy krok do zmiany",
-      description: "Nie musisz przechodzić przez to samotnie. Każda wiadomość to pierwszy krok w kierunku lepszego samopoczucia."
+      description: "Moim celem jako terapeuty, jest sprawić by pacjent przestał mnie potrzebować.  Chcę wyposażyć Cię w narzędzia, ktore pozwolą Ci samodzielnie radzić sobie z trudnościami nawet po zakończeniu terapii."
     }
   },
 
   // Footer
   footer: {
-    copyright: "© 2024 Anna Kowalska - Psychoterapia i Psychodietetyka. Wszystkie prawa zastrzeżone."
+    copyright: "© 2025 Marta Paździur - Psychoterapia i Psychodietetyka. Wszystkie prawa zastrzeżone."
   }
 }; 

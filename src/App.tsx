@@ -431,7 +431,7 @@ function App() {
                 {/* Email with Copy Button */}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
                   <a 
-                    href={`mailto:${siteContent.contact.email.address}?subject=${encodeURIComponent(siteContent.contact.email.subject)}&body=${encodeURIComponent(siteContent.contact.email.body)}`}
+                    href={`mailto:${siteContent.contact.email.address}`}
                     className="inline-flex items-center space-x-3 bg-gradient-to-r from-fuchsia-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-fuchsia-700 hover:to-teal-700"
                   >
                     <Mail className="w-5 h-5" />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Mail, Monitor, Heart, Brain, Users, MessageCircle, Calendar, CheckCircle, Instagram, /* Facebook */ } from 'lucide-react';
+import { Menu, X, Mail, Monitor, Heart, Brain, Users, MessageCircle, Calendar, CheckCircle, Instagram, Facebook } from 'lucide-react';
 import { siteContent } from './config/content';
 // Import images
 import logoImage from './assets/images/logo.jpg';
@@ -9,6 +9,8 @@ const profilePictureImage = new URL('./assets/images/profile_picture.JPEG', impo
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showSmallLogo, setShowSmallLogo] = useState(false);
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState({ logo: false, profile: false });
   const heroSectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -58,7 +60,6 @@ function App() {
                 >
                   <Instagram className="w-4 h-4" />
                 </a>
-                {/* Facebook icon temporarily hidden until the profile is ready 
                 <a 
                   href={siteContent.header.social.facebook}
                   target="_blank" 
@@ -68,7 +69,6 @@ function App() {
                 >
                   <Facebook className="w-4 h-4" />
                 </a>
-                */}
               </div>
             </div>
 
@@ -77,8 +77,17 @@ function App() {
               <div 
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="w-16 h-16 rounded-lg flex items-center justify-center text-sm font-semibold shadow-md overflow-hidden border-2 border-white cursor-pointer hover:shadow-lg transition-all duration-300"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => e.key === 'Enter' && window.scrollTo({ top: 0, behavior: 'smooth' })}
+                aria-label="Przewiń do góry strony"
               >
-                <img src={logoImage} alt="Logo" className="w-full h-full object-cover" />
+                <img 
+                  src={logoImage} 
+                  alt="Logo Marta Paździur - Psychoterapia i Psychodietetyka" 
+                  className="w-full h-full object-cover"
+                  onLoad={() => setImagesLoaded(prev => ({ ...prev, logo: true }))}
+                />
               </div>
             </div>
 
@@ -115,8 +124,18 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Duże logo */}
           <div className="mb-8">
-            <div className="w-32 h-32 md:w-60 md:h-60 rounded-xl flex items-center justify-center shadow-lg mx-auto border-2 border-gray-100 overflow-hidden">
-              <img src={logoImage} alt="Logo" className="w-full h-full object-cover" />
+            <div className="w-32 h-32 md:w-60 md:h-60 rounded-xl flex items-center justify-center shadow-lg mx-auto border-2 border-gray-100 overflow-hidden bg-gray-100">
+              {!imagesLoaded.logo && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-12 h-12 border-4 border-fuchsia-600 border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
+              <img 
+                src={logoImage} 
+                alt="Logo Marta Paździur - Psychoterapia i Psychodietetyka" 
+                className={`w-full h-full object-cover transition-opacity duration-300 ${imagesLoaded.logo ? 'opacity-100' : 'opacity-0'}`}
+                onLoad={() => setImagesLoaded(prev => ({ ...prev, logo: true }))}
+              />
             </div>
           </div>
           
@@ -167,8 +186,18 @@ function App() {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="w-80 h-96 rounded-lg flex items-center justify-center overflow-hidden">
-                <img src={profilePictureImage} alt="Marta Paździur" className="w-full h-full object-cover" />
+              <div className="w-80 h-96 rounded-lg flex items-center justify-center overflow-hidden bg-gray-100 relative">
+                {!imagesLoaded.profile && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 border-4 border-teal-600 border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
+                <img 
+                  src={profilePictureImage} 
+                  alt="Marta Paździur - Psychoterapeuta i Psychodietetyk" 
+                  className={`w-full h-full object-cover transition-opacity duration-300 ${imagesLoaded.profile ? 'opacity-100' : 'opacity-0'}`}
+                  onLoad={() => setImagesLoaded(prev => ({ ...prev, profile: true }))}
+                />
               </div>
             </div>
           </div>
@@ -427,10 +456,82 @@ function App() {
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400">{siteContent.footer.copyright}</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-center md:text-left">
+              <p className="text-gray-400 text-sm">{siteContent.footer.copyright}</p>
+              <button 
+                onClick={() => setShowPrivacyPolicy(true)}
+                className="text-gray-400 hover:text-white text-sm underline mt-2 transition-colors"
+              >
+                Polityka Prywatności (RODO)
+              </button>
+            </div>
+            <div className="flex items-center space-x-4">
+              <a 
+                href={siteContent.footer.social.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href={siteContent.footer.social.facebook} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
+
+      {/* Privacy Policy Modal */}
+      {showPrivacyPolicy && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto my-8">
+            <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
+              <h2 className="text-2xl font-bold text-gray-800">{siteContent.privacyPolicy.title}</h2>
+              <button 
+                onClick={() => setShowPrivacyPolicy(false)}
+                className="text-gray-500 hover:text-gray-700 transition-colors"
+                aria-label="Zamknij"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            <div className="px-6 py-6">
+              <p className="text-sm text-gray-500 mb-6">{siteContent.privacyPolicy.lastUpdated}</p>
+              
+              {Object.values(siteContent.privacyPolicy.sections).map((section, index) => (
+                <div key={index} className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">{section.title}</h3>
+                  {section.content.map((paragraph, pIndex) => (
+                    <p key={pIndex} className="text-gray-600 mb-2 leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+            <div className="sticky bottom-0 bg-gray-50 border-t border-gray-200 px-6 py-4">
+              <button 
+                onClick={() => setShowPrivacyPolicy(false)}
+                className="w-full bg-gradient-to-r from-fuchsia-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+              >
+                Zamknij
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

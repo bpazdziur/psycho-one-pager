@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Mail, Monitor, Heart, Brain, Users, MessageCircle, Calendar, CheckCircle, Instagram, Facebook } from 'lucide-react';
+import { Menu, X, Mail, Monitor, Heart, Brain, Users, MessageCircle, Calendar, CheckCircle, Instagram, Copy, Check } from 'lucide-react';
 import { siteContent } from './config/content';
 // Import images
 import logoImage from './assets/images/logo.jpg';
@@ -11,7 +11,15 @@ function App() {
   const [showSmallLogo, setShowSmallLogo] = useState(false);
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState({ logo: false, profile: false });
+  const [emailCopied, setEmailCopied] = useState(false);
   const heroSectionRef = useRef<HTMLElement>(null);
+
+  const copyEmailToClipboard = () => {
+    navigator.clipboard.writeText(siteContent.contact.email.address).then(() => {
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,15 +67,6 @@ function App() {
                   aria-label="Instagram"
                 >
                   <Instagram className="w-4 h-4" />
-                </a>
-                <a 
-                  href={siteContent.header.social.facebook}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-fuchsia-600 transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -428,13 +427,35 @@ function App() {
                 <p className="text-gray-600 mb-6">
                   {siteContent.contact.email.description}
                 </p>
-                <a 
-                  href={`mailto:${siteContent.contact.email.address}?subject=${encodeURIComponent(siteContent.contact.email.subject)}&body=${encodeURIComponent(siteContent.contact.email.body)}`}
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-fuchsia-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-fuchsia-700 hover:to-teal-700"
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>{siteContent.contact.email.address}</span>
-                </a>
+                
+                {/* Email with Copy Button */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+                  <a 
+                    href={`mailto:${siteContent.contact.email.address}?subject=${encodeURIComponent(siteContent.contact.email.subject)}&body=${encodeURIComponent(siteContent.contact.email.body)}`}
+                    className="inline-flex items-center space-x-3 bg-gradient-to-r from-fuchsia-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-fuchsia-700 hover:to-teal-700"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span>{siteContent.contact.email.address}</span>
+                  </a>
+                  
+                  <button
+                    onClick={copyEmailToClipboard}
+                    className="inline-flex items-center space-x-2 bg-white border-2 border-gray-300 text-gray-700 px-6 py-4 rounded-xl font-semibold hover:border-fuchsia-600 hover:text-fuchsia-600 transition-all duration-300 transform hover:scale-105"
+                    aria-label="Kopiuj adres email"
+                  >
+                    {emailCopied ? (
+                      <>
+                        <Check className="w-5 h-5 text-green-600" />
+                        <span className="text-green-600">Skopiowano</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-5 h-5" />
+                        <span>Kopiuj email</span>
+                      </>
+                    )}
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -476,15 +497,6 @@ function App() {
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href={siteContent.footer.social.facebook} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
               </a>
             </div>
           </div>

@@ -122,8 +122,7 @@ export const siteContent = {
         "Poprzedza rozpoczęcie pracy terapeutycznej",
         "Sesja trwa 50 - 60 minut",
         "Pozwala zapoznać się z problemem i indywidualnie dopasować plan dalszej pracy",
-        "Może stanowić niezależną formę wsparcia (bez podejmowania długoterminowej psychoterapii)",
-        "Koszt sesji - 220 zł"
+        "Może stanowić niezależną formę wsparcia (bez podejmowania długoterminowej psychoterapii)"
       
       ]
     },
@@ -132,7 +131,6 @@ export const siteContent = {
       features: [
         "Regularne spotkania",
         "Sesja trwa 50 minut",
-        "Koszt sesji - 220 zł",
         "Prowadzona w nurcie poznawczo-behawioralnym"
         
       ]
@@ -145,8 +143,7 @@ export const siteContent = {
         "Wykorzystanie narzędzi CBT",
         "praca oparta o indywidualne cele, warunki oraz zasoby klienta",
         "Edukacja żywieniowa",
-        "Sesja trwa 50 minut",
-        "Koszt spotkania - 220 zł"
+        "Sesja trwa 50 minut"
       ]
     }
   },

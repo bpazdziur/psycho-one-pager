@@ -6,6 +6,15 @@ import logoImage from './assets/images/logo.jpg';
 // Use a relative path for the profile picture to avoid JPEG extension issues
 const profilePictureImage = new URL('./assets/images/profile_picture.JPEG', import.meta.url).href;
 
+// Declare ZnanyLekarz widget type
+declare global {
+  interface Window {
+    ZnanyLekarzWidget?: {
+      init: () => void;
+    };
+  }
+}
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showSmallLogo, setShowSmallLogo] = useState(false);
@@ -31,6 +40,31 @@ function App() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Load ZnanyLekarz widget after component mounts
+  useEffect(() => {
+    // Load the widget script dynamically
+    const loadWidget = () => {
+      const scriptId = 'zl-widget-s';
+      
+      // Check if script already exists
+      if (document.getElementById(scriptId)) {
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = 'https://platform.docplanner.com/js/widget.js';
+      script.async = true;
+      
+      document.body.appendChild(script);
+    };
+
+    // Load after a short delay to ensure DOM is ready
+    const timer = setTimeout(loadWidget, 100);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -416,45 +450,70 @@ function App() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            {/* Główny kontakt - Email */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-100">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-fuchsia-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <Mail className="w-10 h-10 text-white" />
+          <div className="max-w-6xl mx-auto">
+            {/* Grid Layout: Widget (left) and Email (right) */}
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {/* ZnanyLekarz Widget - Left */}
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Opinie pacjentów</h3>
+                  <p className="text-gray-600">Zobacz co mówią moi pacjenci na ZnanyLekarz</p>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">{siteContent.contact.email.title}</h3>
-                <p className="text-gray-600 mb-6">
-                  {siteContent.contact.email.description}
-                </p>
-                
-                {/* Email with Copy Button */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+                <div className="flex justify-center" id="zl-widget-container">
                   <a 
-                    href={`mailto:${siteContent.contact.email.address}`}
-                    className="inline-flex items-center space-x-3 bg-gradient-to-r from-fuchsia-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-fuchsia-700 hover:to-teal-700"
+                    id="zl-url" 
+                    className="zl-url" 
+                    href="https://www.znanylekarz.pl/marta-kowalska-3/psycholog-psychoterapeuta/wroclaw" 
+                    rel="nofollow" 
+                    data-zlw-doctor="marta-kowalska-3" 
+                    data-zlw-type="big" 
+                    data-zlw-opinion="true" 
+                    data-zlw-hide-branding="true"
                   >
-                    <Mail className="w-5 h-5" />
-                    <span>{siteContent.contact.email.address}</span>
+                    Marta Kowalska - ZnanyLekarz.pl
                   </a>
+                </div>
+              </div>
+
+              {/* Główny kontakt - Email - Right */}
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-fuchsia-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Mail className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4">{siteContent.contact.email.title}</h3>
+                  <p className="text-gray-600 mb-6">
+                    {siteContent.contact.email.description}
+                  </p>
                   
-                  <button
-                    onClick={copyEmailToClipboard}
-                    className="inline-flex items-center space-x-2 bg-white border-2 border-gray-300 text-gray-700 px-6 py-4 rounded-xl font-semibold hover:border-fuchsia-600 hover:text-fuchsia-600 transition-all duration-300 transform hover:scale-105"
-                    aria-label="Kopiuj adres email"
-                  >
-                    {emailCopied ? (
-                      <>
-                        <Check className="w-5 h-5 text-green-600" />
-                        <span className="text-green-600">Skopiowano</span>
-                      </>
-                    ) : (
-                      <>
-                        <Copy className="w-5 h-5" />
-                        <span>Kopiuj email</span>
-                      </>
-                    )}
-                  </button>
+                  {/* Email with Copy Button */}
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+                    <a 
+                      href={`mailto:${siteContent.contact.email.address}`}
+                      className="inline-flex items-center space-x-3 bg-gradient-to-r from-fuchsia-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-fuchsia-700 hover:to-teal-700"
+                    >
+                      <Mail className="w-5 h-5" />
+                      <span>{siteContent.contact.email.address}</span>
+                    </a>
+                    
+                    <button
+                      onClick={copyEmailToClipboard}
+                      className="inline-flex items-center space-x-2 bg-white border-2 border-gray-300 text-gray-700 px-6 py-4 rounded-xl font-semibold hover:border-fuchsia-600 hover:text-fuchsia-600 transition-all duration-300 transform hover:scale-105"
+                      aria-label="Kopiuj adres email"
+                    >
+                      {emailCopied ? (
+                        <>
+                          <Check className="w-5 h-5 text-green-600" />
+                          <span className="text-green-600">Skopiowano</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-5 h-5" />
+                          <span>Kopiuj email</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

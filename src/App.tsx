@@ -109,7 +109,7 @@ function App() {
             <div className={`absolute left-1/2 transform -translate-x-1/2 -translate-y-1 hidden md:block transition-all duration-500 ${showSmallLogo ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
               <div 
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="w-16 h-16 rounded-lg flex items-center justify-center text-sm font-semibold shadow-md overflow-hidden border-2 border-white cursor-pointer hover:shadow-lg transition-all duration-300"
+                className="w-16 h-16 rounded-lg flex items-center justify-center text-sm font-semibold shadow-md overflow-hidden border-2 border-white cursor-pointer hover:shadow-lg transition-all duration-300 bg-white"
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => e.key === 'Enter' && window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -118,7 +118,7 @@ function App() {
                 <img 
                   src={logoImage} 
                   alt="Logo Marta Paździur - Psychoterapia i Psychodietetyka" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   onLoad={() => setImagesLoaded(prev => ({ ...prev, logo: true }))}
                 />
               </div>
@@ -157,16 +157,16 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Duże logo */}
           <div className="mb-8">
-            <div className="w-32 h-32 md:w-60 md:h-60 rounded-xl flex items-center justify-center shadow-lg mx-auto border-2 border-gray-100 overflow-hidden bg-gray-100">
+            <div className="w-32 h-32 md:w-60 md:h-60 rounded-xl flex items-center justify-center shadow-lg mx-auto border-2 border-gray-100 overflow-hidden bg-white relative">
               {!imagesLoaded.logo && (
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center z-10">
                   <div className="w-12 h-12 border-4 border-fuchsia-600 border-t-transparent rounded-full animate-spin"></div>
                 </div>
               )}
               <img 
                 src={logoImage} 
                 alt="Logo Marta Paździur - Psychoterapia i Psychodietetyka" 
-                className={`w-full h-full object-cover transition-opacity duration-300 ${imagesLoaded.logo ? 'opacity-100' : 'opacity-0'}`}
+                className={`w-full h-full object-contain transition-opacity duration-300 ${imagesLoaded.logo ? 'opacity-100' : 'opacity-0'}`}
                 onLoad={() => setImagesLoaded(prev => ({ ...prev, logo: true }))}
               />
             </div>

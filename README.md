@@ -2,43 +2,35 @@
 
 ## About
 
-This is a modern, responsive website built with React, TypeScript, and Tailwind CSS. The site showcases professional psychotherapy and psychodietetics services with a clean, accessible design.
+This repository contains a pure static website for psychotherapy and psychodietetics services.
 
-## Features
+The website is SEO-first. Core content is available directly in HTML without relying on client-side rendering.
 
-- 🎨 Modern, responsive design
-- 📱 Mobile-first approach
-- ⚡ Fast loading with Vite
-- 🎯 SEO optimized
-- 📧 Direct email contact (no forms needed)
-- 🌐 Deployed on GitHub Pages
+## Project Structure
 
-## Tech Stack
+- `public/index.html` - main page
+- `public/privacy.html` - privacy policy page
+- `public/images/` - optimized image assets
+- `public/robots.txt` and `public/sitemap.xml` - SEO files
+- `.github/workflows/deploy.yml` - GitHub Pages deployment
 
-- **Frontend**: React 18, TypeScript
-- **Styling**: Tailwind CSS
-- **Build Tool**: Vite
-- **Icons**: Lucide React
-- **Deployment**: GitHub Pages
+## Local Preview
 
-## Development
+Run any static file server from the `public` directory:
 
 ```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
+cd public
+python3 -m http.server 4173
 ```
+
+Then open `http://localhost:4173`.
+
+## Deployment
+
+GitHub Actions deploys the `public` directory directly to GitHub Pages.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License for software implementation only.
 
-**Note:** The MIT License applies only to the software code and technical implementation. All personal information, contact details, and professional content remain the exclusive property of Anna Kowalska.
+Personal information, contact details, and professional content remain the exclusive property of Marta Paździur.

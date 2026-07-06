@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
+    <link rel="canonical" href="https://psychoterapia.pazdziur.pl/" />
+    <meta name="author" content="Marta Paździur" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Profesjonalne wsparcie psychologiczne i psychodietetyczne online. Psychoterapia poznawczo-behawioralna (CBT), pomoc przy zaburzeniach lękowych, depresji, zaburzeniach odżywiania. Konsultacje online dla pacjentów z całej Polski." />
+    <meta name="keywords" content="psychoterapia online, psychodietetyka, terapia CBT, zaburzenia odżywiania, psycholog online, dietetyk, Marta Paździur, terapia poznawczo-behawioralna, lęki, depresja, konsultacje psychologiczne" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://psychoterapia.pazdziur.pl/" />
+    <meta property="og:title" content="Marta Paździur - Psychoterapia Poznawczo-Behawioralna i Psychodietetyka Online" />
+    <meta property="og:description" content="Profesjonalne wsparcie psychologiczne i psychodietetyczne online. Psychoterapia poznawczo-behawioralna (CBT), pomoc przy zaburzeniach lękowych, depresji i zaburzeniach odżywiania." />
+    <meta property="og:image" content="https://psychoterapia.pazdziur.pl/logo-social.jpg" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Marta Paździur - Psychoterapia Poznawczo-Behawioralna i Psychodietetyka Online" />
+    <meta name="twitter:description" content="Profesjonalne wsparcie psychologiczne i psychodietetyczne online dla pacjentów z całej Polski." />
+    <meta name="twitter:image" content="https://psychoterapia.pazdziur.pl/logo-social.jpg" />
+    <title>Marta Paździur - Psychoterapia Poznawczo-Behawioralna i Psychodietetyka Online</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accentPink: "#c026d3",
+              accentTeal: "#0d9488"
+            }
+          }
+        }
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        text-rendering: optimizeLegibility;
+      }
+
+      .fallback-avatar {
+        background: linear-gradient(135deg, #f0abfc, #5eead4);
+        color: #374151;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Psychologist",
+        "name": "Marta Paździur",
+        "description": "Psychoterapeuta poznawczo-behawioralny i psychodietetyk",
+        "url": "https://psychoterapia.pazdziur.pl",
+        "email": "marta.pazdziur@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "PL"
+        },
+        "areaServed": "PL",
+        "availableLanguage": "pl",
+        "medicalSpecialty": ["Psychotherapy", "Psychology", "Dietetics"],
+        "sameAs": [
+          "https://www.instagram.com/pokoj_z_jedzeniem",
+          "https://www.facebook.com/p/Gabinet-Psychologiczny-Marta-Kowalska-100063481955374/"
+        ]
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-white text-gray-800">
+    <header class="fixed top-0 z-50 w-full bg-white/95 shadow-sm backdrop-blur-sm">
+      <div class="mx-auto flex max-w-7xl items-center py-4 px-4 sm:px-6 lg:px-8">
+        <div class="flex grow items-center justify-start space-x-4 text-sm text-gray-600 sm:space-x-6">
+          <a href="mailto:marta.pazdziur@gmail.com" class="flex items-center gap-2 transition-colors hover:text-accentPink" aria-label="Napisz email">
+            <svg class="h-4 w-4 text-accentPink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg>
+            <span>marta.pazdziur@gmail.com</span>
+          </a>
+          <a href="https://www.instagram.com/pokoj_z_jedzeniem" target="_blank" rel="noopener noreferrer" class="text-gray-600 transition-colors hover:text-accentPink" aria-label="Instagram">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="18" cy="6" r="1"></circle></svg>
+          </a>
+        </div>
+
+        <button id="smallLogoButton" class="pointer-events-none absolute left-1/2 hidden h-16 w-16 -translate-x-1/2 -translate-y-1 items-center justify-center overflow-hidden rounded-lg border-2 border-white bg-white opacity-0 shadow-md transition-all duration-500 md:flex" aria-label="Przewiń do góry">
+          <img src="/images/logo.jpg" alt="Logo Marta Paździur - Psychoterapia i Psychodietetyka" class="h-full w-full object-contain" width="1185" height="1200" loading="eager" fetchpriority="high" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-avatar'); this.parentElement.textContent='MP';" />
+        </button>
+
+        <button id="menuToggle" class="ml-auto rounded-md p-2 text-gray-600 transition-colors hover:text-accentPink" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+          <svg id="menuIcon" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg id="closeIcon" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <nav id="mobileMenu" class="absolute top-full left-0 hidden w-full border-t bg-white shadow-lg">
+        <ul class="mx-auto max-w-7xl space-y-2 px-4 py-4">
+          <li><a href="#about" class="block py-2 text-gray-700 transition-colors hover:text-accentPink">O MNIE</a></li>
+          <li><a href="#what-is" class="block py-2 text-gray-700 transition-colors hover:text-accentPink">CZYM JEST PSYCHOTERAPIA/PSYCHODIETETYKA</a></li>
+          <li><a href="#areas" class="block py-2 text-gray-700 transition-colors hover:text-accentPink">OBSZARY I PROBLEMY, Z KTÓRYMI PRACUJĘ</a></li>
+          <li><a href="#services" class="block py-2 text-gray-700 transition-colors hover:text-accentPink">RODZAJE USŁUG</a></li>
+          <li><a href="#contact" class="block py-2 text-gray-700 transition-colors hover:text-accentPink">KONTAKT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="bg-gradient-to-br from-fuchsia-50 to-teal-50 pb-16 pt-24">
+        <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <div class="mb-8">
+            <div class="relative mx-auto flex h-32 w-32 items-center justify-center overflow-hidden rounded-xl border-2 border-gray-100 bg-white shadow-lg md:h-60 md:w-60">
+              <img src="/images/logo.jpg" alt="Logo Marta Paździur - Psychoterapia i Psychodietetyka" class="h-full w-full object-contain" width="1185" height="1200" loading="eager" fetchpriority="high" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-avatar'); this.parentElement.textContent='MARTA';" />
+            </div>
+          </div>
+
+          <h1 class="mb-6 text-2xl font-bold text-gray-700 md:text-3xl">PSYCHOTERAPIA POZNAWCZO-BEHAWIORALNA<br />PSYCHODIETETYKA</h1>
+          <p class="mx-auto mb-8 max-w-3xl text-xl text-gray-600">Profesjonalne wsparcie psychologiczne i psychodietetyczne. Pomogę Ci odzyskać równowagę.</p>
+          <a href="#contact" class="inline-block rounded-full bg-gradient-to-r from-fuchsia-600 to-teal-600 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg">Umów konsultację</a>
+        </div>
+      </section>
+
+      <section id="about" class="bg-white py-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <h2 class="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">O MNIE</h2>
+            <div class="mx-auto h-1 w-24 bg-gradient-to-r from-fuchsia-600 to-teal-600"></div>
+          </div>
+
+          <div class="grid items-center gap-12 md:grid-cols-2">
+            <div>
+              <h3 class="mb-6 text-2xl font-semibold text-gray-800">Marta Paździur</h3>
+              <p class="mb-6 leading-relaxed text-gray-600">Jestem magistrem psychologii, psychodietetykiem oraz psychoterapeutą poznawczo-behawioralnym w trakcie certyfikacji. Dodatkowe kursy i szkolenia pozwalają mi wzbogacać mój warsztat pracy o narzędzia i techniki zaczerpnięte z Terapii Schematów, DBT, oraz Mindfulness. Doświadczenie zawodowe zdobywam w takich placówkach jak: Dolnośląskie Centrum Zdrowia Psychicznego, Centrum Profilaktyki i Terapii SALUS w Długołęce, Fundacja Opieka i Troska, Centrum Zdrowia Psychicznego i Psychoterapii Reatrybucja, Centrum Pomocy Psychologicznej we Wrocławiu, Ogólnopolskie Centrum Zaburzeń Odżywiania.</p>
+              <p class="mb-6 leading-relaxed text-gray-600">W swojej pracy kieruję się wytycznymi Kodeksu Etycznego. Pracuję pod stałą superwizją. Wciąż podnoszę swoje kwalifikacje, uczestnicząc w licznych szkoleniach.</p>
+
+              <div class="flex items-center gap-2 text-sm text-gray-600">
+                <svg class="h-4 w-4 text-accentPink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg>
+                <a href="mailto:marta.pazdziur@gmail.com" class="hover:text-accentPink">marta.pazdziur@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <div class="flex h-96 w-80 items-center justify-center overflow-hidden rounded-lg bg-gray-100">
+                <img src="/images/profile_picture.JPEG" alt="Marta Paździur - Psychoterapeuta i Psychodietetyk" class="h-full w-full object-cover" width="1066" height="1600" loading="lazy" decoding="async" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-avatar'); this.parentElement.textContent='Marta Paździur';" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="what-is" class="bg-gray-50 py-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <h2 class="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">CZYM JEST</h2>
+            <div class="mx-auto h-1 w-24 bg-gradient-to-r from-fuchsia-600 to-teal-600"></div>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-2">
+            <article class="rounded-lg bg-white p-8 shadow-lg transition-shadow hover:shadow-xl">
+              <div class="mb-6 text-center">
+                <h3 class="mb-4 text-2xl font-semibold text-fuchsia-600">Psychoterapia poznawczo-behawioralna</h3>
+                <div class="group relative mx-auto mb-4 h-48 w-64 cursor-pointer overflow-hidden rounded-lg bg-gray-200">
+                  <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-fuchsia-100 to-fuchsia-200 transition-opacity duration-300 group-hover:opacity-0">
+                    <div class="text-center">
+                      <div class="mx-auto mb-2 flex h-16 w-16 items-center justify-center rounded-full bg-fuchsia-300 text-fuchsia-700">CBT</div>
+                      <p class="font-medium text-fuchsia-700">Psychoterapia</p>
+                    </div>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center bg-white p-4 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <p class="text-sm leading-relaxed text-gray-700">CBT to sprawdzona metoda leczenia zaburzeń nastroju, lękowych, zaburzeń odżywiania, osobowości, i wielu innych problemów.</p>
+                  </div>
+                </div>
+              </div>
+              <p class="leading-relaxed text-gray-600">Terapia CBT (poznawczo-behawioralna), to metoda terapeutyczna, której skuteczność jest poparta licznymi badaniami naukowymi. Koncentruje się na zmianie negatywnych wzorców myślenia i zachowania. Pracujemy nad identyfikacją destrukcyjnych myśli i schematów i zastępowaniem ich zdrowymi przekonaniami, co przekłada się na zmianę samopoczucia.</p>
+            </article>
+
+            <article class="rounded-lg bg-white p-8 shadow-lg transition-shadow hover:shadow-xl">
+              <div class="mb-6 text-center">
+                <h3 class="mb-4 text-2xl font-semibold text-teal-600">Psychodietetyka</h3>
+                <div class="group relative mx-auto mb-4 h-48 w-64 cursor-pointer overflow-hidden rounded-lg bg-gray-200">
+                  <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-teal-100 to-teal-200 transition-opacity duration-300 group-hover:opacity-0">
+                    <div class="text-center">
+                      <div class="mx-auto mb-2 flex h-16 w-16 items-center justify-center rounded-full bg-teal-300 text-teal-700">ZD</div>
+                      <p class="font-medium text-teal-700">Psychodietetyka</p>
+                    </div>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center bg-white p-4 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <p class="text-sm leading-relaxed text-gray-700">Psychodietetyka to holistyczne podejście łączące psychologię z dietetyką, pomagające w budowaniu zdrowej relacji z jedzeniem i własnym ciałem.</p>
+                  </div>
+                </div>
+              </div>
+              <p class="leading-relaxed text-gray-600">Psychodietetyka łączy wiedzę z zakresu psychologii i dietetyki, pomagając w rozwiązywaniu problemów związanych z jedzeniem, wagą i obrazem własnego ciała. Pracujemy nad budowaniem zdrowej relacji z jedzeniem. Wykorzystanie narzędzi psychodietetycznych pomaga poradzić sobie m.in. z kompulsywnym objadaniem się, lękiem przed przybraniem na wadze, czy zaburzonym obrazem własnego ciała. Pomagają również przeprowadzić skuteczną redukcję masy ciała bez diet, w oparciu o narzędzia psychologiczne.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="areas" class="bg-white py-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <h2 class="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">OBSZARY I PROBLEMY, Z KTÓRYMI PRACUJĘ</h2>
+            <div class="mx-auto h-1 w-24 bg-gradient-to-r from-fuchsia-600 to-teal-600"></div>
+          </div>
+
+          <div class="mb-12 grid gap-8 md:grid-cols-2">
+            <article class="rounded-lg bg-gradient-to-br from-fuchsia-50 to-fuchsia-100 p-8">
+              <h3 class="mb-6 text-center text-2xl font-semibold text-fuchsia-700">Psychoterapia</h3>
+              <div class="group relative mb-6 h-64 w-full cursor-pointer overflow-hidden rounded-lg bg-gray-200">
+                <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-fuchsia-200 to-fuchsia-300 transition-opacity duration-300 group-hover:opacity-0">
+                  <div class="text-center">
+                    <div class="mx-auto mb-3 flex h-20 w-20 items-center justify-center rounded-full bg-fuchsia-400 text-white">CBT</div>
+                    <p class="text-lg font-semibold text-fuchsia-800">Terapia CBT</p>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-white p-6 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div>
+                    <h4 class="mb-3 text-lg font-semibold text-fuchsia-700">Psychoterapia poznawczo-behawioralna</h4>
+                    <p class="text-sm leading-relaxed text-gray-700">Skuteczna metoda terapeutyczna skupiająca się na identyfikacji i zmianie destrukcyjnych wzorców myślenia oraz zachowań, które wpływają na samopoczucie i funkcjonowanie.</p>
+                  </div>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-700">
+                <li>• Zaburzenia lękowe i napady paniki</li>
+                <li>• Depresja i zaburzenia nastroju</li>
+                <li>• Problemy w relacjach interpersonalnych</li>
+                <li>• Zaburzenia odżywiania</li>
+                <li>• Zaburzenia osobowości</li>
+                <li>• Przewlekły stres</li>
+                <li>• Niska samoocena i brak pewności siebie</li>
+              </ul>
+            </article>
+
+            <article class="rounded-lg bg-gradient-to-br from-teal-50 to-teal-100 p-8">
+              <h3 class="mb-6 text-center text-2xl font-semibold text-teal-700">Psychodietetyka</h3>
+              <div class="group relative mb-6 h-64 w-full cursor-pointer overflow-hidden rounded-lg bg-gray-200">
+                <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-teal-200 to-teal-300 transition-opacity duration-300 group-hover:opacity-0">
+                  <div class="text-center">
+                    <div class="mx-auto mb-3 flex h-20 w-20 items-center justify-center rounded-full bg-teal-400 text-white">PD</div>
+                    <p class="text-lg font-semibold text-teal-800">Zdrowe odżywianie</p>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center bg-white p-6 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div>
+                    <h4 class="mb-3 text-lg font-semibold text-teal-700">Psychodietetyka</h4>
+                    <p class="text-sm leading-relaxed text-gray-700">Holistyczne podejście łączące psychologię z dietetyką, pomagające w budowaniu zdrowej relacji z jedzeniem i własnym ciałem.</p>
+                  </div>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-700">
+                <li>• Zaburzenia odżywiania (anoreksja, bulimia, BED)</li>
+                <li>• Kompulsywne objadanie się</li>
+                <li>• Problemy z wagą i obrazem ciała</li>
+                <li>• Emocjonalne jedzenie</li>
+                <li>• Budowanie zdrowych nawyków żywieniowych</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="bg-gray-50 py-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <h2 class="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">RODZAJE USŁUG</h2>
+            <div class="mx-auto h-1 w-24 bg-gradient-to-r from-fuchsia-600 to-teal-600"></div>
+            <p class="mt-6 text-lg text-gray-600">Oferuję profesjonalne wsparcie dostosowane do Twoich potrzeb</p>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-3">
+            <article class="rounded-lg bg-white p-8 shadow-lg transition-shadow hover:shadow-xl">
+              <h3 class="mb-6 text-center text-xl font-semibold text-gray-800">Konsultacja psychologiczna</h3>
+              <ul class="space-y-3 text-gray-600">
+                <li>• Poprzedza rozpoczęcie pracy terapeutycznej</li>
+                <li>• Sesja trwa 50 - 60 minut</li>
+                <li>• Pozwala zapoznać się z problemem i indywidualnie dopasować plan dalszej pracy</li>
+                <li>• Może stanowić niezależną formę wsparcia (bez podejmowania długoterminowej psychoterapii)</li>
+              </ul>
+            </article>
+
+            <article class="rounded-lg bg-white p-8 shadow-lg transition-shadow hover:shadow-xl">
+              <h3 class="mb-6 text-center text-xl font-semibold text-gray-800">Psychoterapia indywidualna</h3>
+              <ul class="space-y-3 text-gray-600">
+                <li>• Regularne spotkania</li>
+                <li>• Sesja trwa 50 minut</li>
+                <li>• Prowadzona w nurcie poznawczo-behawioralnym</li>
+              </ul>
+            </article>
+
+            <article class="rounded-lg bg-white p-8 shadow-lg transition-shadow hover:shadow-xl">
+              <h3 class="mb-6 text-center text-xl font-semibold text-gray-800">Konsultacja psychodietetyczna</h3>
+              <ul class="space-y-3 text-gray-600">
+                <li>• Analiza nawyków żywieniowych</li>
+                <li>• Praca nad psychologicznymi aspektami odżywiania</li>
+                <li>• Wykorzystanie narzędzi CBT</li>
+                <li>• Praca oparta o indywidualne cele, warunki oraz zasoby klienta</li>
+                <li>• Edukacja żywieniowa</li>
+                <li>• Sesja trwa 50 minut</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-gradient-to-br from-gray-50 to-white py-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <h2 class="mb-4 text-3xl font-bold text-gray-800 md:text-4xl">KONTAKT</h2>
+            <div class="mx-auto mb-4 h-1 w-24 bg-gradient-to-r from-fuchsia-600 to-teal-600"></div>
+            <p class="mx-auto max-w-2xl text-lg text-gray-600">W celu umówienia konsultacji zapraszam do kontaktu emailowego</p>
+          </div>
+
+          <div class="mx-auto max-w-6xl">
+            <div class="mb-8 grid gap-8 md:grid-cols-2">
+              <article class="rounded-2xl border border-gray-100 bg-white p-8 shadow-xl">
+                <div class="mb-6 text-center">
+                  <h3 class="mb-2 text-2xl font-bold text-gray-800">Opinie pacjentów</h3>
+                  <p class="text-gray-600">Zobacz co mówią moi pacjenci na ZnanyLekarz</p>
+                </div>
+                <div class="flex justify-center" id="zl-widget-container">
+                  <a id="zl-url" class="zl-url" href="https://www.znanylekarz.pl/marta-kowalska-3/psycholog-psychoterapeuta/wroclaw" rel="nofollow" data-zlw-doctor="marta-kowalska-3" data-zlw-type="big" data-zlw-opinion="true" data-zlw-hide-branding="true">Marta Kowalska - ZnanyLekarz.pl</a>
+                </div>
+              </article>
+
+              <article class="rounded-2xl border border-gray-100 bg-white p-8 shadow-xl">
+                <div class="text-center">
+                  <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-600 to-teal-600 shadow-lg">
+                    <svg class="h-10 w-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg>
+                  </div>
+                  <h3 class="mb-4 text-2xl font-bold text-gray-800">Napisz do mnie</h3>
+                  <p class="mb-6 text-gray-600">Najszybszy sposób na kontakt to bezpośredni email. Odpowiem tak szybko, jak to możliwe.</p>
+                  <div class="mb-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                    <a href="mailto:marta.pazdziur@gmail.com" class="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-fuchsia-600 to-teal-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:from-fuchsia-700 hover:to-teal-700 hover:shadow-xl">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg>
+                      <span id="emailText">marta.pazdziur@gmail.com</span>
+                    </a>
+                    <button id="copyEmailButton" class="inline-flex items-center gap-2 rounded-xl border-2 border-gray-300 bg-white px-6 py-4 font-semibold text-gray-700 transition-all duration-300 hover:scale-105 hover:border-fuchsia-600 hover:text-fuchsia-600">Kopiuj email</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="mt-8 text-center">
+              <article class="rounded-xl border border-gray-100 bg-white p-6 shadow-lg">
+                <h4 class="mb-3 text-lg font-semibold text-gray-800">Pierwszy krok do zmiany</h4>
+                <p class="mb-4 text-gray-600">Moim celem jako terapeuty jest sprawić, by pacjent przestał mnie potrzebować. Chcę wyposażyć Cię w narzędzia, które pozwolą Ci samodzielnie radzić sobie z trudnościami nawet po zakończeniu terapii.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 py-8 text-white">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 sm:px-6 md:flex-row lg:px-8">
+        <div class="text-center md:text-left">
+          <p class="text-sm text-gray-400">© 2026 Marta Paździur - Psychoterapia i Psychodietetyka. Wszystkie prawa zastrzeżone.</p>
+          <a href="/privacy.html" class="mt-2 inline-block text-sm text-gray-400 underline transition-colors hover:text-white">Polityka Prywatności (RODO)</a>
+        </div>
+        <a href="https://www.instagram.com/pokoj_z_jedzeniem" target="_blank" rel="noopener noreferrer" class="text-gray-400 transition-colors hover:text-white" aria-label="Instagram">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="18" cy="6" r="1"></circle></svg>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuIcon = document.getElementById("menuIcon");
+      const closeIcon = document.getElementById("closeIcon");
+      const smallLogoButton = document.getElementById("smallLogoButton");
+      const hero = document.getElementById("hero");
+      const copyEmailButton = document.getElementById("copyEmailButton");
+      const emailText = document.getElementById("emailText");
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        menuIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      smallLogoButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      const heroObserver = new IntersectionObserver((entries) => {
+        const topVisible = entries[0].isIntersecting;
+        if (topVisible) {
+          smallLogoButton.classList.add("opacity-0", "pointer-events-none");
+          smallLogoButton.classList.remove("opacity-100");
+        } else {
+          smallLogoButton.classList.remove("opacity-0", "pointer-events-none");
+          smallLogoButton.classList.add("opacity-100");
+        }
+      });
+
+      heroObserver.observe(hero);
+
+      copyEmailButton.addEventListener("click", async () => {
+        const email = emailText.textContent.trim();
+        await navigator.clipboard.writeText(email);
+        copyEmailButton.textContent = "Skopiowano";
+        copyEmailButton.classList.add("border-green-600", "text-green-600");
+        setTimeout(() => {
+          copyEmailButton.textContent = "Kopiuj email";
+          copyEmailButton.classList.remove("border-green-600", "text-green-600");
+        }, 2000);
+      });
+
+      (function loadWidget() {
+        if (document.getElementById("zl-widget-s")) {
+          return;
+        }
+        const script = document.createElement("script");
+        script.id = "zl-widget-s";
+        script.src = "https://platform.docplanner.com/js/widget.js";
+        script.async = true;
+        document.body.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>
